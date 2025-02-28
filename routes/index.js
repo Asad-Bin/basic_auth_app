@@ -12,5 +12,6 @@ router.get('/lead/:lead_id', landing.show_lead);
 router.get('/lead/:lead_id/edit', landing.show_edit_lead);
 // for submitting form for lead_id
 router.post('/lead/:lead_id/edit', landing.edit_lead);
+router.post('/lead/:lead_id/delete', landing.delete_lead);
 
 module.exports = router;
