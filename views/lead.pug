@@ -1,11 +1,17 @@
-extends layout 
+doctype html
+html(lang='en')
+    include common/head.pug
+    +head("Starter MVP")
+    body
+        h1 Lead 
+        p 
+            span #{lead.email}
+            
+            a(href="/lead/" + lead.id + "/edit") Edit
 
-block content
-    h1 Lead 
-    p 
-        span #{lead.email}
-         
-        a(href="/lead/" + lead.id + "/edit") Edit
-
-        form(action="/lead/" + lead.id + "/delete", method="POST")
-            button(type="submit") Delete
+            form(action="/lead/" + lead.id + "/delete", method="POST")
+                button(type="submit") Delete
+        include common/footer.pug
+        +footer() 
+        //- script(src='https://code.jquery.com/jquery-3.7.1.min.js')
+        //- script(src='/javascripts/leads.js')
