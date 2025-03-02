@@ -33,7 +33,7 @@ exports.signup = function(req, res, next) {
     })
 }
 
-exports.login = function(req, res, next) {
+exports.login = function(req, res, next) { 
     passport.authenticate('local', {
         successRedirect: "/",
         failureRedirect: "/login",
