@@ -41,8 +41,10 @@ exports.login = function(req, res, next) {
     })(req, res, next);
 }
 
-exports.logout = function(req, res, next) { 
-	req.logout();
-	req.session.destroy();
-	res.redirect('/');
+exports.logout = function(req, res, next) {
+    req.logout(function(err) {
+        if (err) { return next(err); }
+        req.session.destroy();
+        res.redirect('/');
+    });
 }
