@@ -1,5 +1,3 @@
-# Fast Track
-
 ## Functions
 ### Authenication system
     - Register, login, logout
